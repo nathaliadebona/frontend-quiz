@@ -20,3 +20,17 @@ body.light-mode {
     --color-accent: #7c3aed;
     --color-alert: #d92d2d;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: var(--font-text);
+    color: var(--color-text);
+    background-color: var(--color-bg);
+    transition: background-color 0.3s, color 0.3s;
+}
+
