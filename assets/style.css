@@ -6,6 +6,9 @@
     --color-text-secondary: #8b96ad;
     --color-accent: #a78bfa;
     --color-alert: #ff6b6b;
+
+    --font-title: 'JetBrains Mono', monospace;
+    --font-text: 'Inter', sans-serif;
 }
 
 body.light-mode {
