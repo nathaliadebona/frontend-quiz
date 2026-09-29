@@ -50,7 +50,7 @@ header h1 {
     font-size: 1.1rem;
     color: var(--color-text);
     background: transparent;
-    transition: color 0.3s ease-out;
+    transition: color 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -60,17 +60,43 @@ main {
     padding: 1rem;
 }
 
+main button {
+    padding: 0.5rem 1rem;
+    border: 0.0625rem solid var(--color-border);
+    border-radius: 0.3rem;
+    font-family: var(--font-title);
+    color: var(--color-text);
+    background-color: var(--color-card);
+    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s;
+    cursor: pointer;
+}
+
+#topic,
+#level {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 1rem;
+    text-align: center;
+}
+
 @media (min-width: 48rem) {
     header {
-        padding: 1.5rem;
-    }
-
-    main {
         padding: 1.5rem;
     }
 
     #theme-toggle:hover {
         color: var(--color-text-secondary);
     }
+
+    main {
+        padding: 1.5rem;
+    }
+
+    main button:hover {
+        border-color: var(--color-accent);
+        color: var(--color-accent);     
+    }
+
 }
 
