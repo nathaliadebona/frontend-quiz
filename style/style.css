@@ -34,3 +34,33 @@ body {
     transition: background-color 0.3s, color 0.3s;
 }
 
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem;
+}
+
+header h1 {
+    font-family: var(--font-title);
+}
+
+#theme-toggle {
+    border: none;
+    font-size: 1.1rem;
+    color: var(--color-text);
+    background: transparent;
+    transition: color 0.3s ease-out;
+    cursor: pointer;
+}
+
+@media (min-width: 48rem) {
+    header {
+        padding: 1.5rem;
+    }
+
+    #theme-toggle:hover {
+        color: var(--color-text-secondary);
+    }
+}
+
