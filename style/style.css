@@ -54,8 +54,18 @@ header h1 {
     cursor: pointer;
 }
 
+main {
+    max-width: 50rem;
+    margin: 0 auto;
+    padding: 1rem;
+}
+
 @media (min-width: 48rem) {
     header {
+        padding: 1.5rem;
+    }
+
+    main {
         padding: 1.5rem;
     }
 
