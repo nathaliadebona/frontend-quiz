@@ -18,76 +18,75 @@
         <h1>Frontend Quiz</h1>
     </header>
 
-    <section id="topic">
-        <h2>Escolha o tema:</h2>
+    <main>
+        <section id="topic">
+            <h2>Escolha o tema:</h2>
 
-        <button type="button" id="html-btn" data-topic="html"><span><i class="fa-solid fa-code" aria-hidden="true"></i></span> HTML</button>
-        <button type="button" id="css-btn" data-topic="css"><span><i class="fa-solid fa-palette" aria-hidden="true"></i></span> CSS</button>
-        <button type="button" id="js-btn" data-topic="js"><span><i class="fa-brands fa-square-js" aria-hidden="true"></i></span> JavaScript</button>
-    </section>
+            <button type="button" id="html-btn" data-topic="html"><span><i class="fa-solid fa-code" aria-hidden="true"></i></span> HTML</button>
+            <button type="button" id="css-btn" data-topic="css"><span><i class="fa-solid fa-palette" aria-hidden="true"></i></span> CSS</button>
+            <button type="button" id="js-btn" data-topic="js"><span><i class="fa-brands fa-square-js" aria-hidden="true"></i></span> JavaScript</button>
+        </section>
 
-    <section id="level">
-        <h2>Escolha o nível:</h2>
+        <section id="level">
+            <h2>Escolha o nível:</h2>
 
-        <button type="button" data-level="facil">Fácil</button>
-        <button type="button" data-level="medio">Médio</button>
-        <button type="button" data-level="dificil">Difícil</button>
-    </section>
+            <button type="button" data-level="facil">Fácil</button>
+            <button type="button" data-level="medio">Médio</button>
+            <button type="button" data-level="dificil">Difícil</button>
+        </section>
 
-    <section id="countdown">
-        <h2>O quiz vai começar em...</h2>
+        <section id="countdown">
+            <h2>O quiz vai começar em...</h2>
         
-        <span id="countdown-number" aria-live="polite">5</span>
-    </section>
+            <span id="countdown-number" aria-live="polite">5</span>
+        </section>
 
-    <section id="quiz">
-        <div class="quiz-question-items">
-            <div class="progress-items">
-                <span id="progress-counter">Pergunta 1/10</span>
+        <section id="quiz">
+            <div class="quiz-question-items">
+                <div class="progress-items">
+                    <span id="progress-counter">Pergunta 1/10</span>
+        
+                    <span id="progress-timer">Timer</span>
+                </div>
+
+                <div class="progress-bar-container">
+                    <div id="progress-bar" role="progressbar"></div>
+                </div>
+
+                <h2 id="quiz-question">Texto da pergunta</h2>
+            </div>
+
+            <div class="quiz-alternatives">
+                <button type="button" data-alternative="0">Alternativa A</button>
+                <button type="button" data-alternative="1">Alternativa B</button>
+                <button type="button" data-alternative="2">Alternativa C</button>
+                <button type="button" data-alternative="3">Alternativa D</button>
+            </div>
+        </section>
+
+        <section id="result">
+            <div class="result-items">
+                <h2>Você completou...</h2>
+
+                <div class="correct-answers">
+                    <span id="correct-answer-counter">0/10</span>
+                </div>
+
+                <button type="button" id="play-again-btn">Jogar de novo</button>
+            </div>
+
+            <div class="mistakes-list">
+                <p class="congrats-message" hidden><i class="fa-solid fa-star" aria-hidden="true"></i> Parabéns! Você acertou todas as perguntas! <i class="fa-solid fa-star" aria-hidden="true"></i></p>
                 
-                <span id="progress-timer">Timer</span>
+                <div class="mistake-item" hidden>
+                    <p class="mistake-question">Texto da pergunta</p>
+        
+                    <button type="button" class="view-answer">Ver resposta</button>
+        
+                    <p class="mistake-question-answer" hidden>Resposta e explicação da pergunta</p>
+                </div>
             </div>
-
-            <div class="progress-bar-container">
-                <div id="progress-bar"></div>
-            </div>
-
-            <h2 id="quiz-question">Texto da pergunta</h2>
-        </div>
-
-        <div class="quiz-alternatives">
-            <button type="button" data-alternative="0">Alternativa A</button>
-
-            <button type="button" data-alternative="1">Alternativa B</button>
-
-            <button type="button" data-alternative="2">Alternativa C</button>
-
-            <button type="button" data-alternative="3">Alternativa D</button>
-        </div>
-    </section>
-
-    <section id="result">
-        <div class="result-items">
-            <h2>Você completou...</h2>
-
-            <div class="correct-answers">
-                <span id="correct-answer-counter">0/10</span>
-            </div>
-
-            <button type="button" id="play-again-btn">Jogar de novo</button>
-        </div>
-
-        <div class="mistakes-list">
-            <p class="congrats-message" hidden><i class="fa-solid fa-star" aria-hidden="true"></i> Parabéns! Você acertou todas as perguntas! <i class="fa-solid fa-star" aria-hidden="true"></i></p>
-
-            <div class="mistake-item" hidden>
-                <p class="mistake-question">Texto da pergunta</p>
-                
-                <button type="button" class="view-answer">Ver resposta</button>
-                
-                <p class="mistake-question-answer">Resposta e explicação da pergunta</p>
-            </div>
-        </div>
-    </section>
+        </section>
+    </main>
 </body>
 </html>
