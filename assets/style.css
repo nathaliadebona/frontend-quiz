@@ -1,0 +1,19 @@
+:root {
+    --color-bg: #0f1420;
+    --color-card: #171e2e;
+    --color-border: #2a3347;
+    --color-text: #e6ebf5;
+    --color-text-secondary: #8b96ad;
+    --color-accent: #a78bfa;
+    --color-alert: #ff6b6b;
+}
+
+body.light-mode {
+    --color-bg: #f4f6fa;
+    --color-card: #ffffff;
+    --color-border: #d9dfeb;
+    --color-text: #141a29;
+    --color-text-secondary: #5b6680;
+    --color-accent: #7c3aed;
+    --color-alert: #d92d2d;
+}
