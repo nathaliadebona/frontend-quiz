@@ -67,7 +67,27 @@
     </section>
 
     <section id="result">
+        <div class="result-items">
+            <h2>Você completou...</h2>
 
+            <div class="correct-answers">
+                <span id="correct-answer-counter">0/10</span>
+            </div>
+
+            <button type="button" id="play-again-btn">Jogar de novo</button>
+        </div>
+
+        <div class="mistakes-list">
+            <p class="congrats-message" hidden><i class="fa-solid fa-star" aria-hidden="true"></i> Parabéns! Você acertou todas as perguntas! <i class="fa-solid fa-star" aria-hidden="true"></i></p>
+
+            <div class="mistake-item" hidden>
+                <p class="mistake-question">Texto da pergunta</p>
+                
+                <button type="button" class="view-answer">Ver resposta</button>
+                
+                <p class="mistake-question-answer">Resposta e explicação da pergunta</p>
+            </div>
+        </div>
     </section>
 </body>
 </html>
