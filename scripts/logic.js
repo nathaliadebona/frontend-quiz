@@ -46,6 +46,12 @@ levelButtons.forEach((button) => {
                 const quizQuestion = document.getElementById('quiz-question');
                 quizQuestion.textContent = currentQuestions[0].pergunta;
 
+                const quizAlternatives = document.querySelectorAll('.quiz-alternatives button');
+
+                quizAlternatives.forEach((alternative, index) => {
+                    alternative.textContent = currentQuestions[0].alternativas[index];
+                });
+
                 showScreen('quiz');
             }
         }, 1000);    
