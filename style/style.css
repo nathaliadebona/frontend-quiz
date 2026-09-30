@@ -211,6 +211,10 @@ main button {
     transition: color 0.3s ease-in-out, border-left-color 0.3s ease-in-out;
 }
 
+main section:not(.active) {
+    display: none !important;
+}
+
 @media (min-width: 48rem) {
     header {
         padding: 1.5rem;
