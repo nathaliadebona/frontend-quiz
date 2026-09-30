@@ -6,7 +6,7 @@ const questions = {
                 alternativas: ["li", "a", "hr", "span"],
                 respostaCerta: 1,
                 explicacao: "A tag a cria um link clicável em HTML."
-            }
+            },
         ],
         medio: [],
         dificil: []
@@ -18,7 +18,14 @@ const questions = {
                 alternativas: ["color", "font-color", "text-color", "background"],
                 respostaCerta: 0,
                 explicacao: "A propriedade color define a cor do texto."
-            }
+            },
+
+            {
+                pergunta: "Qual propriedade muda o tamanho do texto?",
+                alternativas: ["text-size", "font-style", "font-size", "text-scale"],
+                respostaCerta: 2,
+                explicacao: "A propriedade font-size muda o tamanho do texto."
+            },
         ],
         medio: [],
         dificil: []
