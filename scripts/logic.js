@@ -5,6 +5,7 @@ const levelButtons = document.querySelectorAll('#level button');
 let selectedTopic = '';
 let selectedLevel = '';
 let currentQuestions = [];
+let currentQuestionIndex = 0;
 
 function showScreen(screenId) {
     screens.forEach((section) => {
@@ -44,12 +45,12 @@ levelButtons.forEach((button) => {
                 clearInterval(countdown);
 
                 const quizQuestion = document.getElementById('quiz-question');
-                quizQuestion.textContent = currentQuestions[0].pergunta;
+                quizQuestion.textContent = currentQuestions[currentQuestionIndex].pergunta;
 
                 const quizAlternatives = document.querySelectorAll('.quiz-alternatives button');
 
                 quizAlternatives.forEach((alternative, index) => {
-                    alternative.textContent = currentQuestions[0].alternativas[index];
+                    alternative.textContent = currentQuestions[currentQuestionIndex].alternativas[index];
                 });
 
                 showScreen('quiz');
