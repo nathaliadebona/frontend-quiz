@@ -7,6 +7,7 @@ let selectedTopic = '';
 let selectedLevel = '';
 let currentQuestions = [];
 let currentQuestionIndex = 0;
+let score = 0;
 
 function showScreen(screenId) {
     screens.forEach((section) => {
@@ -66,7 +67,8 @@ quizAlternatives.forEach((button) => {
         const correct = currentQuestions[currentQuestionIndex].respostaCerta;
 
         if (chosen === correct) {
-            console.log('acertou');
+            score = score + 1;
+            console.log(score);
         } else {
             console.log('errou');
         }
