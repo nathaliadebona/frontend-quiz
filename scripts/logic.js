@@ -24,6 +24,9 @@ topicButtons.forEach((button) => {
 levelButtons.forEach((button) => {
     button.addEventListener('click', () => {
         selectedLevel = button.dataset.level;
+
+        console.log(questions[selectedTopic][selectedLevel]);
+
         showScreen('countdown');
 
         const countdownNumber = document.getElementById('countdown-number');
