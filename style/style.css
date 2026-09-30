@@ -148,6 +148,27 @@ main button {
     text-align: start;
 }
 
+.result-items {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.5rem;
+    text-align: center;
+}
+
+.correct-answers {
+    padding: 5rem 3.5rem;
+    border: 0.0625rem solid var(--color-border);
+    border-radius: 1rem;
+    background-color: var(--color-card);
+}
+
+#correct-answer-counter {
+    font-family: var(--font-title);
+    font-size: 2.5rem;
+    color: var(--color-accent);
+}
+
 @media (min-width: 48rem) {
     header {
         padding: 1.5rem;
