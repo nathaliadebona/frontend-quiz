@@ -4,6 +4,7 @@ const levelButtons = document.querySelectorAll('#level button');
 
 let selectedTopic = '';
 let selectedLevel = '';
+let currentQuestions = [];
 
 function showScreen(screenId) {
     screens.forEach((section) => {
@@ -25,7 +26,9 @@ levelButtons.forEach((button) => {
     button.addEventListener('click', () => {
         selectedLevel = button.dataset.level;
 
-        console.log(questions[selectedTopic][selectedLevel]);
+        currentQuestions = questions[selectedTopic][selectedLevel];
+
+        console.log(currentQuestions)
 
         showScreen('countdown');
 
