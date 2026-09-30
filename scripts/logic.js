@@ -1,6 +1,7 @@
 const screens = document.querySelectorAll('main section');
 const topicButtons = document.querySelectorAll('#topic button');
 const levelButtons = document.querySelectorAll('#level button');
+const quizAlternatives = document.querySelectorAll('.quiz-alternatives button');
 
 let selectedTopic = '';
 let selectedLevel = '';
@@ -19,8 +20,6 @@ function showScreen(screenId) {
 function showQuestion() {
     const quizQuestion = document.getElementById('quiz-question');
     quizQuestion.textContent = currentQuestions[currentQuestionIndex].pergunta;
-
-    const quizAlternatives = document.querySelectorAll('.quiz-alternatives button');
 
     quizAlternatives.forEach((alternative, index) => {
         alternative.textContent = currentQuestions[currentQuestionIndex].alternativas[index];
@@ -58,6 +57,12 @@ levelButtons.forEach((button) => {
                 showScreen('quiz');
             }
         }, 1000);    
+    });
+});
+
+quizAlternatives.forEach((button) => {
+    button.addEventListener('click', () => {
+        console.log(button.dataset.alternative)
     });
 });
 
