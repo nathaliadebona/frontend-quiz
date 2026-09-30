@@ -227,11 +227,18 @@ main button {
         margin: 0 auto;
     }
 
-    #quiz {
+    #quiz,
+    #result {
         display: grid;
         grid-template-columns: repeat(2, minmax(0, 1fr));
         align-items: center;
         gap: 4rem;
+    }
+
+    .result-items {
+        position: sticky;
+        top: 1rem;
+        align-self: start;
     }
 }
 
