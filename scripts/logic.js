@@ -16,6 +16,17 @@ function showScreen(screenId) {
     screen.classList.add('active');
 }
 
+function showQuestion() {
+    const quizQuestion = document.getElementById('quiz-question');
+    quizQuestion.textContent = currentQuestions[currentQuestionIndex].pergunta;
+
+    const quizAlternatives = document.querySelectorAll('.quiz-alternatives button');
+
+    quizAlternatives.forEach((alternative, index) => {
+        alternative.textContent = currentQuestions[currentQuestionIndex].alternativas[index];
+    });
+}
+
 topicButtons.forEach((button) => {
     button.addEventListener('click', () => {
         selectedTopic = button.dataset.topic;
@@ -43,16 +54,7 @@ levelButtons.forEach((button) => {
 
             if (number === 0) {
                 clearInterval(countdown);
-
-                const quizQuestion = document.getElementById('quiz-question');
-                quizQuestion.textContent = currentQuestions[currentQuestionIndex].pergunta;
-
-                const quizAlternatives = document.querySelectorAll('.quiz-alternatives button');
-
-                quizAlternatives.forEach((alternative, index) => {
-                    alternative.textContent = currentQuestions[currentQuestionIndex].alternativas[index];
-                });
-
+                showQuestion();
                 showScreen('quiz');
             }
         }, 1000);    
