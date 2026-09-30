@@ -72,6 +72,9 @@ quizAlternatives.forEach((button) => {
         } else {
             console.log('errou');
         }
+
+       currentQuestionIndex = currentQuestionIndex + 1;
+       showQuestion(); 
     });
 });
 
