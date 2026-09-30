@@ -1,6 +1,8 @@
 const screens = document.querySelectorAll('main section');
 const topicButtons = document.querySelectorAll('#topic button');
 
+let selectedTopic = '';
+
 function showScreen(screenId) {
     screens.forEach((section) => {
         section.classList.remove('active');
@@ -12,7 +14,8 @@ function showScreen(screenId) {
 
 topicButtons.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(button.dataset.topic);
+        selectedTopic = button.dataset.topic;
+        console.log(selectedTopic);
     });
 });
 
