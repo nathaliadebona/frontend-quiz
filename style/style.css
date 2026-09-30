@@ -80,6 +80,21 @@ main button {
     text-align: center;
 }
 
+#countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+}
+
+#countdown-number {
+    font-family: var(--font-title);
+    font-size: 5rem;
+    color: var(--color-accent);
+    line-height: 1;
+}
+
 @media (min-width: 48rem) {
     header {
         padding: 1.5rem;
