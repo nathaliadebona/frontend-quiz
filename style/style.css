@@ -197,6 +197,12 @@ main button {
     color: var(--color-accent);
 }
 
+.mistake-question-answer {
+    padding-left: 1rem;
+    border-left: 0.25rem solid var(--color-accent);
+    color: var(--color-text-secondary);
+}
+
 @media (min-width: 48rem) {
     header {
         padding: 1.5rem;
