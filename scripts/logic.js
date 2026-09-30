@@ -25,6 +25,20 @@ levelButtons.forEach((button) => {
     button.addEventListener('click', () => {
         selectedLevel = button.dataset.level;
         showScreen('countdown');
+
+        const countdownNumber = document.getElementById('countdown-number');
+        let number = 5;
+        countdownNumber.textContent = number;
+
+        const countdown = setInterval(() => {
+            number = number - 1;
+            countdownNumber.textContent = number;
+
+            if (number === 0) {
+                clearInterval(countdown);
+                showScreen('quiz');
+            }
+        }, 1000);    
     });
 });
 
