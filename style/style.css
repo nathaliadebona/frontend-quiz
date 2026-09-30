@@ -118,6 +118,21 @@ main button {
     transition: width 0.4s ease-in-out;
 }
 
+#progress-counter {
+    font-family: var(--font-title);
+    color: var(--color-text-secondary);
+}
+
+#progress-timer {
+    font-family: var(--font-title);
+    font-size: 1.2rem;
+    transition: color 0.3s ease-in-out;
+}
+
+.timer-alert {
+    color: var(--color-alert);
+}
+
 @media (min-width: 48rem) {
     header {
         padding: 1.5rem;
