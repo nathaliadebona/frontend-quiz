@@ -67,7 +67,7 @@ main button {
     font-family: var(--font-title);
     color: var(--color-text);
     background-color: var(--color-card);
-    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s;
+    transition: border-color 0.3s ease-in-out, color 0.3s ease-in-out, background-color 0.3s ease-in-out;
     cursor: pointer;
 }
 
@@ -98,5 +98,10 @@ main button {
         color: var(--color-accent);     
     }
 
+    #topic,
+    #level {
+        max-width: 25rem;
+        margin: 0 auto;
+    }
 }
 
