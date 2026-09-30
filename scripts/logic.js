@@ -15,9 +15,7 @@ function showScreen(screenId) {
 topicButtons.forEach((button) => {
     button.addEventListener('click', () => {
         selectedTopic = button.dataset.topic;
-        console.log(selectedTopic);
+        showScreen('level');
     });
 });
 
-
-showScreen('topic');
