@@ -42,6 +42,10 @@ levelButtons.forEach((button) => {
 
             if (number === 0) {
                 clearInterval(countdown);
+
+                const quizQuestion = document.getElementById('quiz-question');
+                quizQuestion.textContent = currentQuestions[0].pergunta;
+
                 showScreen('quiz');
             }
         }, 1000);    
