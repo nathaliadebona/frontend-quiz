@@ -62,7 +62,14 @@ levelButtons.forEach((button) => {
 
 quizAlternatives.forEach((button) => {
     button.addEventListener('click', () => {
-        console.log(button.dataset.alternative)
+        const chosen = Number(button.dataset.alternative);
+        const correct = currentQuestions[currentQuestionIndex].respostaCerta;
+
+        if (chosen === correct) {
+            console.log('acertou');
+        } else {
+            console.log('errou');
+        }
     });
 });
 
