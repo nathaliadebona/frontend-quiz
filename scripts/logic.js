@@ -59,6 +59,7 @@ function showQuestion() {
 
         if (timeLeft === 0) {
             clearInterval(timerInterval);
+            mistakes.push(currentQuestions[currentQuestionIndex]);
             goToNextQuestion();
         }
     }, 1000);
@@ -141,5 +142,6 @@ themeToggle.addEventListener('click', () => {
 playAgainBtn.addEventListener('click', () => {
     score = 0;
     currentQuestionIndex = 0;
+    mistakes = [];
     showScreen('topic');
 });
