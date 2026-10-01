@@ -83,6 +83,17 @@ function goToNextQuestion() {
             congratsMessage.hidden = false;
         } else {
             congratsMessage.hidden = true;
+            const mistakesList = document.querySelector('.mistakes-list');
+
+            const item = document.createElement('div');
+            item.classList.add('mistake-item');
+
+            const text = document.createElement('p');
+            text.classList.add('mistake-question');
+            text.textContent = mistakes[0].pergunta;
+
+            item.appendChild(text);
+            mistakesList.appendChild(item);
         }
         
         showScreen('result');
