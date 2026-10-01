@@ -25,6 +25,10 @@ function showQuestion() {
     const progressCounter = document.getElementById('progress-counter');
     progressCounter.textContent = 'Pergunta ' + (currentQuestionIndex + 1) + '/' + currentQuestions.length;
 
+    const progressBar = document.getElementById('progress-bar');
+    const percentage = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
+    progressBar.style.width = percentage + '%';
+
     quizAlternatives.forEach((alternative, index) => {
         alternative.textContent = currentQuestions[currentQuestionIndex].alternativas[index];
     });
