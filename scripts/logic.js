@@ -79,6 +79,12 @@ function goToNextQuestion() {
         
         const congratsMessage = document.querySelector('.congrats-message');
 
+        const mistakesList = document.querySelector('.mistakes-list');
+
+        mistakesList.querySelectorAll('.mistake-item').forEach((oldItem) => {
+            oldItem.remove();
+        });
+
         if (mistakes.length === 0) {
             congratsMessage.hidden = false;
         } else {
