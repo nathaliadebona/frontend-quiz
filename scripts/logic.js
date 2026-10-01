@@ -76,7 +76,9 @@ quizAlternatives.forEach((button) => {
        currentQuestionIndex = currentQuestionIndex + 1;
        
        if (currentQuestionIndex === currentQuestions.length) {
-            showScreen('result');
+        const correctAnswerCounter = document.getElementById('correct-answer-counter');
+        correctAnswerCounter.textContent = score + '/' + currentQuestions.length;   
+        showScreen('result');
        } else {
         showQuestion();
        }
