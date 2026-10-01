@@ -76,6 +76,15 @@ function goToNextQuestion() {
         clearInterval(timerInterval);
         const correctAnswerCounter = document.getElementById('correct-answer-counter');
         correctAnswerCounter.textContent = score + '/' + currentQuestions.length;   
+        
+        const congratsMessage = document.querySelector('.congrats-message');
+
+        if (mistakes.length === 0) {
+            congratsMessage.hidden = false;
+        } else {
+            congratsMessage.hidden = true;
+        }
+        
         showScreen('result');
     } else {
         showQuestion();
