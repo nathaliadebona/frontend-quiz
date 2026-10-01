@@ -13,6 +13,9 @@ let selectedLevel = '';
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
+let timeRemaining = 20;
+let timeLeft = 0;
+let timerInterval;
 
 function showScreen(screenId) {
     screens.forEach((section) => {
@@ -35,7 +38,21 @@ function showQuestion() {
     progressBar.style.width = percentage + '%';
 
     const progressTimer = document.getElementById('progress-timer');
-    progressTimer.textContent = levelsTimer[selectedLevel] + 's';
+
+    clearInterval(timerInterval);
+
+    timeLeft = levelsTimer[selectedLevel];
+    progressTimer.textContent = timeLeft + 's';
+
+    timerInterval = setInterval(() => {
+        timeLeft = timeLeft - 1;
+        progressTimer.textContent = timeLeft + 's';
+
+        if (timeLeft === 0) {
+            clearInterval(timerInterval);
+            console.log('acabou o tempo');
+        }
+    }, 1000);
 
     quizAlternatives.forEach((alternative, index) => {
         alternative.textContent = currentQuestions[currentQuestionIndex].alternativas[index];
