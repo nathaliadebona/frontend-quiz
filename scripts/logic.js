@@ -50,6 +50,7 @@ function showQuestion() {
 
         if (timeLeft === 0) {
             clearInterval(timerInterval);
+            goToNextQuestion();
         }
     }, 1000);
 
