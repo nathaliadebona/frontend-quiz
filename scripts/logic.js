@@ -1,4 +1,5 @@
 const themeToggle = document.getElementById('theme-toggle');
+const themeIcon = document.querySelector('#theme-toggle i');
 const screens = document.querySelectorAll('main section');
 const topicButtons = document.querySelectorAll('#topic button');
 const levelButtons = document.querySelectorAll('#level button');
@@ -130,5 +131,8 @@ quizAlternatives.forEach((button) => {
 
 themeToggle.addEventListener('click', () => {
     document.body.classList.toggle('light-mode');
+
+    themeIcon.classList.toggle('fa-sun');
+    themeIcon.classList.toggle('fa-moon');
 });
 
