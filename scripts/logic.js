@@ -19,6 +19,7 @@ let score = 0;
 let timeRemaining = 20;
 let timeLeft = 0;
 let timerInterval;
+let mistakes = [];
 
 function showScreen(screenId) {
     screens.forEach((section) => {
@@ -121,9 +122,9 @@ quizAlternatives.forEach((button) => {
 
         if (chosen === correct) {
             score = score + 1;
-            console.log(score);
         } else {
-            console.log('errou');
+            mistakes.push(currentQuestions[currentQuestionIndex]);
+            console.log(mistakes);
         }
        
        goToNextQuestion();
