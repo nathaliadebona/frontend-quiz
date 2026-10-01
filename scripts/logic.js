@@ -1,4 +1,5 @@
 const themeToggle = document.getElementById('theme-toggle');
+const playAgainBtn = document.getElementById('play-again-btn');
 const themeIcon = document.querySelector('#theme-toggle i');
 const screens = document.querySelectorAll('main section');
 const topicButtons = document.querySelectorAll('#topic button');
@@ -136,3 +137,8 @@ themeToggle.addEventListener('click', () => {
     themeIcon.classList.toggle('fa-moon');
 });
 
+playAgainBtn.addEventListener('click', () => {
+    score = 0;
+    currentQuestionIndex = 0;
+    showScreen('topic');
+});
