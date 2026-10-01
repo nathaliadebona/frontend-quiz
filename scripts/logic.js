@@ -22,6 +22,9 @@ function showQuestion() {
     const quizQuestion = document.getElementById('quiz-question');
     quizQuestion.textContent = currentQuestions[currentQuestionIndex].pergunta;
 
+    const progressCounter = document.getElementById('progress-counter');
+    progressCounter.textContent = 'Pergunta ' + (currentQuestionIndex + 1) + '/' + currentQuestions.length;
+
     quizAlternatives.forEach((alternative, index) => {
         alternative.textContent = currentQuestions[currentQuestionIndex].alternativas[index];
     });
