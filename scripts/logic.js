@@ -42,11 +42,16 @@ function showQuestion() {
     clearInterval(timerInterval);
 
     timeLeft = levelsTimer[selectedLevel];
+    progressTimer.classList.remove('timer-alert');
     progressTimer.textContent = timeLeft + 's';
 
     timerInterval = setInterval(() => {
         timeLeft = timeLeft - 1;
         progressTimer.textContent = timeLeft + 's';
+
+        if (timeLeft <= 5) {
+            progressTimer.classList.add('timer-alert');
+        }
 
         if (timeLeft === 0) {
             clearInterval(timerInterval);
