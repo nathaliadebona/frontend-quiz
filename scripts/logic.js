@@ -1,3 +1,4 @@
+const themeToggle = document.getElementById('theme-toggle');
 const screens = document.querySelectorAll('main section');
 const topicButtons = document.querySelectorAll('#topic button');
 const levelButtons = document.querySelectorAll('#level button');
@@ -125,5 +126,9 @@ quizAlternatives.forEach((button) => {
        
        goToNextQuestion();
     });
+});
+
+themeToggle.addEventListener('click', () => {
+    document.body.classList.toggle('light-mode');
 });
 
