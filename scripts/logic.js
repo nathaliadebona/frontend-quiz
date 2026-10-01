@@ -85,17 +85,19 @@ function goToNextQuestion() {
             congratsMessage.hidden = true;
             const mistakesList = document.querySelector('.mistakes-list');
 
-            const item = document.createElement('div');
-            item.classList.add('mistake-item');
+            mistakes.forEach((mistake) => {
+                const item = document.createElement('div');
+                item.classList.add('mistake-item');
 
-            const text = document.createElement('p');
-            text.classList.add('mistake-question');
-            text.textContent = mistakes[0].pergunta;
+                const text = document.createElement('p');
+                text.classList.add('mistake-question');
+                text.textContent = mistake.pergunta;
 
-            item.appendChild(text);
-            mistakesList.appendChild(item);
+                item.appendChild(text);
+                mistakesList.appendChild(item);
+            });
         }
-        
+
         showScreen('result');
     } else {
         showQuestion();
