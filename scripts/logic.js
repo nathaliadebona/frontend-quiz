@@ -2,6 +2,11 @@ const screens = document.querySelectorAll('main section');
 const topicButtons = document.querySelectorAll('#topic button');
 const levelButtons = document.querySelectorAll('#level button');
 const quizAlternatives = document.querySelectorAll('.quiz-alternatives button');
+const levelsTimer = {
+    facil: 20,
+    medio: 30,
+    dificil: 40
+};
 
 let selectedTopic = '';
 let selectedLevel = '';
@@ -28,6 +33,9 @@ function showQuestion() {
     const progressBar = document.getElementById('progress-bar');
     const percentage = ((currentQuestionIndex + 1) / currentQuestions.length) * 100;
     progressBar.style.width = percentage + '%';
+
+    const progressTimer = document.getElementById('progress-timer');
+    progressTimer.textContent = levelsTimer[selectedLevel] + 's';
 
     quizAlternatives.forEach((alternative, index) => {
         alternative.textContent = currentQuestions[currentQuestionIndex].alternativas[index];
