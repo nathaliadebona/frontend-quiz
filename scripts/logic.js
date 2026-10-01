@@ -50,13 +50,25 @@ function showQuestion() {
 
         if (timeLeft === 0) {
             clearInterval(timerInterval);
-            console.log('acabou o tempo');
         }
     }, 1000);
 
     quizAlternatives.forEach((alternative, index) => {
         alternative.textContent = currentQuestions[currentQuestionIndex].alternativas[index];
     });
+}
+
+function goToNextQuestion() {
+    currentQuestionIndex = currentQuestionIndex + 1;
+
+    if (currentQuestionIndex === currentQuestions.length) {
+        clearInterval(timerInterval);
+        const correctAnswerCounter = document.getElementById('correct-answer-counter');
+        correctAnswerCounter.textContent = score + '/' + currentQuestions.length;   
+        showScreen('result');
+    } else {
+        showQuestion();
+    }
 }
 
 topicButtons.forEach((button) => {
@@ -72,7 +84,7 @@ levelButtons.forEach((button) => {
 
         currentQuestions = questions[selectedTopic][selectedLevel];
 
-        console.log(currentQuestions)
+        console.log(currentQuestions);
 
         showScreen('countdown');
 
@@ -104,16 +116,8 @@ quizAlternatives.forEach((button) => {
         } else {
             console.log('errou');
         }
-
-       currentQuestionIndex = currentQuestionIndex + 1;
        
-       if (currentQuestionIndex === currentQuestions.length) {
-        const correctAnswerCounter = document.getElementById('correct-answer-counter');
-        correctAnswerCounter.textContent = score + '/' + currentQuestions.length;   
-        showScreen('result');
-       } else {
-        showQuestion();
-       }
+       goToNextQuestion();
     });
 });
 
