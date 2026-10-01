@@ -74,7 +74,12 @@ quizAlternatives.forEach((button) => {
         }
 
        currentQuestionIndex = currentQuestionIndex + 1;
-       showQuestion(); 
+       
+       if (currentQuestionIndex === currentQuestions.length) {
+            showScreen('result');
+       } else {
+        showQuestion();
+       }
     });
 });
 
