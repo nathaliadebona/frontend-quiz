@@ -322,7 +322,66 @@ const questions = {
         ],
 
         medio: [
-
+            {
+                pergunta: "O que o método querySelectorAll devolve?",
+                alternativas: ["Só o primeiro elemento que combina", "Uma lista com todos os elementos que combinam", "Um texto com o HTML dos elementos", "Um número com a quantidade encontrada"],
+                respostaCerta: 1,
+                explicacao: "O querySelectorAll devolve uma lista com todos os elementos que combinam com o seletor. O querySelector devolve só o primeiro."
+            },
+            {
+                pergunta: "Qual função para uma repetição criada com setInterval?",
+                alternativas: ["stopInterval()", "endInterval()", "removeInterval()", "clearInterval()"],
+                respostaCerta: 3,
+                explicacao: "O clearInterval recebe o controle remoto que o setInterval devolveu e para a repetição."
+            },
+            {
+                pergunta: "Qual método cria uma cópia de uma lista sem alterar a original?",
+                alternativas: ["slice()", "splice()", "pop()", "shift()"],
+                respostaCerta: 0,
+                explicacao: "O slice() devolve uma cópia da lista. Os outros três alteram a lista original."
+            },
+            {
+                pergunta: "Qual é o resultado de typeof [1, 2, 3]?",
+                alternativas: ["array", "list", "object", "number"],
+                respostaCerta: 2,
+                explicacao: "Em JavaScript, uma lista é um tipo de objeto, então o typeof devolve object. Para saber se algo é lista, use Array.isArray()."
+            },
+            {
+                pergunta: "Qual método cria uma nova lista com o resultado de uma função aplicada a cada item?",
+                alternativas: ["forEach", "filter", "reduce", "map"],
+                respostaCerta: 3,
+                explicacao: "O map devolve uma lista nova, com um resultado para cada item. O forEach só percorre a lista e não devolve nada."
+            },
+            {
+                pergunta: "Qual método cria uma nova lista só com os itens que passam em um teste?",
+                alternativas: ["map", "filter", "find", "some"],
+                respostaCerta: 1,
+                explicacao: "O filter guarda só os itens em que o teste dá verdadeiro. O find devolve apenas um item, e o some devolve true ou false."
+            },
+            {
+                pergunta: "Qual é o resultado de '5' === 5?",
+                alternativas: ["true", "undefined", "false", "erro"],
+                respostaCerta: 2,
+                explicacao: "O === compara valor e tipo. O texto '5' e o número 5 têm tipos diferentes, por isso dá false. É o motivo de usarmos Number() no quiz."
+            },
+            {
+                pergunta: "Como se lê o atributo data-level de um elemento?",
+                alternativas: ["elemento.dataset.level", "elemento.data.level", "elemento.getData('level')", "elemento.level.data"],
+                respostaCerta: 0,
+                explicacao: "Os atributos que começam com data- ficam no dataset, e o nome depois do traço vira a propriedade."
+            },
+            {
+                pergunta: "O que o classList.toggle('ativo') faz?",
+                alternativas: ["Sempre adiciona a classe ao elemento", "Sempre remove a classe do elemento", "Alterna: tira a classe se tem, põe se não tem", "Troca todas as classes do elemento"],
+                respostaCerta: 2,
+                explicacao: "O toggle liga e desliga a classe a cada chamada, como no botão de modo claro e escuro."
+            },
+            {
+                pergunta: "Qual expressão gera um número inteiro aleatório de 0 a 9?",
+                alternativas: ["Math.random(10)", "Math.random() * 10", "Math.int(Math.random() * 10)", "Math.floor(Math.random() * 10)"],
+                respostaCerta: 3,
+                explicacao: "O Math.random() dá um decimal de 0 até menos que 1. Multiplicar por 10 amplia o intervalo, e o Math.floor corta os decimais."
+            }
         ],
 
         dificil: [
