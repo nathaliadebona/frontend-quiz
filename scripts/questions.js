@@ -31,6 +31,28 @@ const questions = {
         dificil: []
     },
     js: {
-        // aqui vai o mesmo formato
+        facil: [
+            {
+                pergunta: "Qual método mostra uma mensagem no Console?",
+                alternativas: ["print()", "console.show()", "log.console()", "console.log()"],
+                respostaCerta: 3,
+                explicacao: "O método console.log imprime uma mensagem no console"
+            }, 
+
+            {
+                pergunta: "Qual palavra cria uma variável que pode mudar de valor?",
+                alternativas: ["const", "let", "int", "fixed"],
+                respostaCerta: 1,
+                explicacao: "A variável let é usada quando o valor irá mudar ao longo do código"
+            }
+        ],
+
+        medio: [
+
+        ],
+
+        dificil: [
+
+        ]
     }
 };
