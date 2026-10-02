@@ -139,12 +139,59 @@ const questions = {
                 respostaCerta: 3,
                 explicacao: "O método console.log imprime uma mensagem no console."
             }, 
-
             {
                 pergunta: "Qual palavra cria uma variável que pode mudar de valor?",
                 alternativas: ["const", "let", "int", "fixed"],
                 respostaCerta: 1,
                 explicacao: "A variável let é usada quando o valor irá mudar ao longo do código."
+            },
+            {
+                pergunta: "Qual palavra cria uma variável que não pode receber outro valor depois?",
+                alternativas: ["let", "var", "const", "fixed"],
+                respostaCerta: 2,
+                explicacao: "A palavra const cria uma constante, que não aceita um valor novo."
+            },
+            {
+                pergunta: "Qual método adiciona um item no final de uma lista?",
+                alternativas: ["add", "push", "append", "insert"],
+                respostaCerta: 1,
+                explicacao: "O método push coloca um item novo no final da lista."
+            },
+            {
+                pergunta: "Qual propriedade mostra quantos itens uma lista tem?",
+                alternativas: ["length", "size", "count", "total"],
+                respostaCerta: 0,
+                explicacao: "A propriedade length guarda a quantidade de itens da lista."
+            },
+            {
+                pergunta: "Qual operador compara dois valores olhando o valor e o tipo ao mesmo tempo?",
+                alternativas: ["=", "==", "=>", "==="],
+                respostaCerta: 3,
+                explicacao: "O operador === só diz que são iguais se o valor e o tipo forem iguais."
+            },
+            {
+                pergunta: "Qual método faz o JavaScript ficar de ouvido esperando um clique em um elemento?",
+                alternativas: ["addEventListener", "whenClick", "listenClick", "clickEvent"],
+                respostaCerta: 0,
+                explicacao: "O método addEventListener recebe o tipo do evento, como click, e a função que roda quando ele acontece."
+            },
+            {
+                pergunta: "Qual método encontra um elemento da página pelo id dele?",
+                alternativas: ["getElementByClass", "getElementByTag", "getElementByName", "getElementById"],
+                respostaCerta: 3,
+                explicacao: "O método getElementById procura o elemento que tem aquele id."
+            },
+            {
+                pergunta: "Qual função transforma um texto em número?",
+                alternativas: ["String()", "Boolean()", "Number()", "Array()"],
+                respostaCerta: 2,
+                explicacao: "A função Number converte um texto, como '3', no número 3."
+            },
+            {
+                pergunta: "Qual propriedade troca o texto que aparece dentro de um elemento?",
+                alternativas: ["writeText", "textContent", "setText", "content"],
+                respostaCerta: 1,
+                explicacao: "A propriedade textContent guarda o texto do elemento, e dá para trocar o valor dela."
             }
         ],
 
