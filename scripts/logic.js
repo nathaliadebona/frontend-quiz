@@ -99,7 +99,19 @@ function goToNextQuestion() {
                 text.classList.add('mistake-question');
                 text.textContent = mistake.pergunta;
 
+                const viewAnswerBtn = document.createElement('button');
+                viewAnswerBtn.type = 'button';
+                viewAnswerBtn.classList.add('view-answer');
+                viewAnswerBtn.textContent = 'Ver resposta';
+
+                const answer = document.createElement('p');
+                answer.classList.add('mistake-question-answer');
+                answer.textContent = 'Resposta certa: ' + mistake.alternativas[mistake.respostaCerta] + '. ' + mistake.explicacao;
+                answer.hidden = true;
+
                 item.appendChild(text);
+                item.appendChild(viewAnswerBtn);
+                item.appendChild(answer);
                 mistakesList.appendChild(item);
             });
         }
