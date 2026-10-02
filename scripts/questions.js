@@ -191,7 +191,70 @@ const questions = {
                 explicacao: "A propriedade border-radius arredonda os cantos da borda."
             }
         ],
-        medio: [],
+
+        medio: [
+            {
+                pergunta: "Qual valor da propriedade display ativa o Flexbox em um elemento?",
+                alternativas: ["flexbox", "flexible", "flex", "inline-flexible"],
+                respostaCerta: 2,
+                explicacao: "O valor flex transforma o elemento em um container flexível, e os filhos viram itens flex."
+            },
+            {
+                pergunta: "Qual valor de position posiciona o elemento em relação ao ancestral posicionado mais próximo?",
+                alternativas: ["absolute", "fixed", "sticky", "static"],
+                respostaCerta: 0,
+                explicacao: "O valor absolute usa o ancestral mais próximo que tenha position diferente de static. O fixed usa a janela do navegador."
+            },
+            {
+                pergunta: "Qual pseudo-classe aplica um estilo quando o mouse passa por cima de um elemento?",
+                alternativas: ["active", "focus", "visited", "hover"],
+                respostaCerta: 3,
+                explicacao: "A pseudo-classe :hover vale enquanto o cursor está sobre o elemento."
+            },
+            {
+                pergunta: "Qual propriedade do Flexbox alinha os itens ao longo do eixo principal?",
+                alternativas: ["align-items", "justify-content", "flex-direction", "align-content"],
+                respostaCerta: 1,
+                explicacao: "A propriedade justify-content distribui os itens no eixo principal. O align-items cuida do eixo transversal."
+            },
+            {
+                pergunta: "Qual propriedade cria espaço entre os itens de um flex ou grid, sem precisar de margin?",
+                alternativas: ["spacing", "gutter", "gap", "space"],
+                respostaCerta: 2,
+                explicacao: "A propriedade gap define o espaço entre os itens, e só entre eles, sem sobrar nas pontas."
+            },
+            {
+                pergunta: "Qual regra aplica estilos só a partir de certa largura de tela?",
+                alternativas: ["@media", "@screen", "@query", "@responsive"],
+                respostaCerta: 0,
+                explicacao: "A regra @media, como em @media (min-width: 48rem), cria estilos que só valem para aquele tamanho de tela."
+            },
+            {
+                pergunta: "Qual valor de box-sizing faz o padding e a borda entrarem na conta da largura do elemento?",
+                alternativas: ["content-box", "padding-box", "border-box", "margin-box"],
+                respostaCerta: 2,
+                explicacao: "Com border-box, a largura definida já inclui padding e borda, e o tamanho fica mais previsível."
+            },
+            {
+                pergunta: "Como se usa o valor de uma variável CSS chamada --cor?",
+                alternativas: ["$cor", "get(--cor)", "use(--cor)", "var(--cor)"],
+                respostaCerta: 3,
+                explicacao: "A função var() lê o valor de uma variável CSS, como em color: var(--cor)."
+            },
+            {
+                pergunta: "Qual propriedade define qual elemento fica na frente quando dois se sobrepõem?",
+                alternativas: ["layer", "z-index", "depth", "stack"],
+                respostaCerta: 1,
+                explicacao: "A propriedade z-index recebe um número, e o elemento com o valor maior fica por cima. Ela funciona em elementos posicionados."
+            },
+            {
+                pergunta: "Qual propriedade faz a mudança de um estilo acontecer aos poucos, e não de uma vez?",
+                alternativas: ["smooth", "transition", "fade", "motion"],
+                respostaCerta: 1,
+                explicacao: "A propriedade transition define quais propriedades animam e quanto tempo a mudança leva."
+            }
+        ],
+
         dificil: []
     },
     js: {
