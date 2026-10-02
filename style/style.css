@@ -161,7 +161,7 @@ main button {
 }
 
 .correct-answers {
-    padding: 5rem 3.5rem;
+    padding: 2rem 2.5rem;
     border: 0.0625rem solid var(--color-border);
     border-radius: 1rem;
     background-color: var(--color-card);
@@ -258,6 +258,10 @@ main section:not(.active) {
         position: sticky;
         top: 1rem;
         align-self: start;
+    }
+
+    .correct-answers {
+        padding: 5rem 3.5rem;
     }
 }
 
