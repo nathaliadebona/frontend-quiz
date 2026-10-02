@@ -316,7 +316,68 @@ const questions = {
             }
         ],
 
-        dificil: []
+        dificil: [
+            {
+                pergunta: "Qual seletor tem a maior especificidade?",
+                alternativas: [".botao", "button", "#botao", "main button"],
+                respostaCerta: 2,
+                explicacao: "O seletor de id vale mais que o de classe, e o de classe vale mais que o de tag."
+            },
+            {
+                pergunta: "Quando dois seletores têm a mesma especificidade, qual regra vence?",
+                alternativas: ["A que aparece por último no CSS", "A que aparece primeiro no CSS", "A que tem mais propriedades", "A que tem o seletor mais curto"],
+                respostaCerta: 0,
+                explicacao: "Em caso de empate, a última regra escrita vence. Por isso a ordem das regras no arquivo importa."
+            },
+            {
+                pergunta: "Qual é a ordem das camadas do box model, de dentro para fora?",
+                alternativas: ["margin, border, padding, content", "content, border, padding, margin", "padding, content, border, margin", "content, padding, border, margin"],
+                respostaCerta: 3,
+                explicacao: "O conteúdo fica no centro, depois vem o padding, a borda e, por fora de tudo, a margin."
+            },
+            {
+                pergunta: "O que acontece com as margens verticais de dois blocos vizinhos que se encostam?",
+                alternativas: ["Elas se somam", "Elas se fundem e vale a maior", "Vale sempre a margem do bloco de baixo", "Vale a menor das duas"],
+                respostaCerta: 1,
+                explicacao: "As margens verticais colapsam e fica só a maior. Isso não acontece dentro de flex ou grid."
+            },
+            {
+                pergunta: "Em que o valor da unidade rem se baseia?",
+                alternativas: ["No tamanho da fonte do elemento pai", "Na largura da tela", "No tamanho da fonte do elemento raiz, o html", "No tamanho da fonte do body"],
+                respostaCerta: 2,
+                explicacao: "O rem usa a fonte do html como referência. Já o em usa a fonte do elemento pai."
+            },
+            {
+                pergunta: "Qual valor de position deixa o elemento rolando normalmente até chegar a certo ponto e depois o prende na tela?",
+                alternativas: ["sticky", "fixed", "absolute", "relative"],
+                respostaCerta: 0,
+                explicacao: "O sticky se comporta como relative até atingir o valor de top, e então fica preso. Foi o que usamos no card de pontuação."
+            },
+            {
+                pergunta: "Para que serve minmax(0, 1fr) em uma coluna do grid?",
+                alternativas: ["Fixar a coluna com largura 0", "Deixar a coluna encolher abaixo do tamanho do conteúdo, sem estourar", "Esconder a coluna em telas pequenas", "Fazer a coluna crescer sem limite"],
+                respostaCerta: 1,
+                explicacao: "Sem o minmax, a coluna 1fr não encolhe além do conteúdo, e um texto comprido a empurra para fora."
+            },
+            {
+                pergunta: "O que seleciona main section:not(.active)?",
+                alternativas: ["Só a section que tem a classe active", "Todas as sections da página, ativas ou não", "Todo elemento dentro do main que não é section", "Todas as sections dentro do main que não têm a classe active"],
+                respostaCerta: 3,
+                explicacao: "O :not() exclui o que combina com o que está entre parênteses. Foi o que usamos para esconder as telas que não estão ativas."
+            },
+            {
+                pergunta: "Por que o atributo hidden não esconde um elemento que tem display: flex no CSS?",
+                alternativas: ["Porque o display escrito no CSS vence o estilo padrão do hidden", "Porque o hidden só funciona em parágrafos", "Porque o flex bloqueia atributos do HTML", "Porque o hidden precisa de JavaScript para funcionar"],
+                respostaCerta: 0,
+                explicacao: "O hidden usa um display: none fraco, que perde para qualquer display do seu CSS. A saída foi a regra [hidden] com display: none."
+            },
+            {
+                pergunta: "O que significa a abordagem mobile-first?",
+                alternativas: ["Testar o site só no celular", "Escrever o CSS base para telas pequenas e usar min-width para ampliar nas maiores", "Esconder o site no desktop", "Escrever o CSS base para telas grandes e usar max-width para reduzir"],
+                respostaCerta: 1,
+                explicacao: "O CSS base serve para o celular, e o @media (min-width) acrescenta o que muda em telas maiores, como fizemos no quiz."
+            }
+        ]
     },
     js: {
         facil: [
