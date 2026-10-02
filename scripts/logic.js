@@ -109,6 +109,10 @@ function goToNextQuestion() {
                 answer.textContent = 'Resposta certa: ' + mistake.alternativas[mistake.respostaCerta] + '. ' + mistake.explicacao;
                 answer.hidden = true;
 
+                viewAnswerBtn.addEventListener('click', () => {
+                    answer.hidden = !answer.hidden;
+                });
+
                 item.appendChild(text);
                 item.appendChild(viewAnswerBtn);
                 item.appendChild(answer);
