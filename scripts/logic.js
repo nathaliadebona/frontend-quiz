@@ -137,7 +137,7 @@ levelButtons.forEach((button) => {
     button.addEventListener('click', () => {
         selectedLevel = button.dataset.level;
 
-        currentQuestions = questions[selectedTopic][selectedLevel];
+        currentQuestions = questions[selectedTopic][selectedLevel].slice().sort(() => Math.random() - 0.5);
 
         console.log(currentQuestions);
 
