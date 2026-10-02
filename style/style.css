@@ -12,10 +12,10 @@
 }
 
 body.light-mode {
-    --color-bg: #f4f6fa;
-    --color-card: #ffffff;
-    --color-border: #d9dfeb;
-    --color-text: #141a29;
+    --color-bg: #dde2ec;
+    --color-card: #eef1f6;
+    --color-border: #b9c1d3;
+    --color-text: #4a5670;
     --color-text-secondary: #5b6680;
     --color-accent: #7c3aed;
     --color-alert: #d92d2d;
