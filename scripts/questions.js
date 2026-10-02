@@ -507,7 +507,66 @@ const questions = {
         ],
 
         dificil: [
-
+            {
+                pergunta: "Qual é o resultado de typeof null?",
+                alternativas: ["null", "undefined", "object", "number"],
+                respostaCerta: 2,
+                explicacao: "O typeof null devolve object. É um erro antigo da linguagem, mantido para não quebrar sites que já existiam."
+            },
+            {
+                pergunta: "O que é uma closure?",
+                alternativas: ["Uma função que continua acessando as variáveis do lugar onde foi criada", "Uma função que fecha a janela do navegador", "Uma variável que não aceita novos valores", "Um método que para um laço de repetição"],
+                respostaCerta: 0,
+                explicacao: "A função guarda o acesso às variáveis de fora dela. A função do setInterval da contagem regressiva faz isso com a variável number."
+            },
+            {
+                pergunta: "Qual é a ordem da saída no console? console.log('A'); setTimeout(() => console.log('B'), 0); console.log('C');",
+                alternativas: ["A, B, C", "A, C, B", "B, A, C", "C, B, A"],
+                respostaCerta: 1,
+                explicacao: "Mesmo com 0 milissegundo, o setTimeout espera o código atual terminar. Por isso o B aparece por último."
+            },
+            {
+                pergunta: "Qual é o resultado de 0.1 + 0.2 === 0.3 em JavaScript?",
+                alternativas: ["true", "undefined", "erro", "false"],
+                respostaCerta: 3,
+                explicacao: "Os números decimais são guardados de forma aproximada, e 0.1 + 0.2 dá 0.30000000000000004. Por isso a comparação falha."
+            },
+            {
+                pergunta: "Qual palavra faz uma função async esperar uma promessa terminar antes de continuar?",
+                alternativas: ["wait", "pause", "await", "hold"],
+                respostaCerta: 2,
+                explicacao: "O await pausa a função async até a promessa ser resolvida e devolve o resultado dela."
+            },
+            {
+                pergunta: "O que acontece ao rodar const lista = []; lista.push(1);?",
+                alternativas: ["Dá erro, porque const não aceita mudanças", "Funciona, porque const só impede trocar a variável por outro valor", "Funciona, mas só na primeira vez", "Dá erro, mas só no modo estrito"],
+                respostaCerta: 1,
+                explicacao: "O const trava a variável, e não o conteúdo da lista. Por isso um push continua funcionando."
+            },
+            {
+                pergunta: "O que o console mostra em console.log(x); var x = 5;?",
+                alternativas: ["5", "null", "erro de referência", "undefined"],
+                respostaCerta: 3,
+                explicacao: "A declaração do var é puxada para o topo, mas o valor 5 não. Com let, o mesmo código daria erro."
+            },
+            {
+                pergunta: "Qual é a diferença da arrow function em relação ao this?",
+                alternativas: ["Ela não tem this próprio e usa o do lugar onde foi criada", "Ela sempre aponta para o window", "Ela não pode ser usada com this", "Ela cria um this novo a cada chamada"],
+                respostaCerta: 0,
+                explicacao: "A arrow function pega o this do contexto de fora. A function comum cria o próprio this, conforme a forma de chamada."
+            },
+            {
+                pergunta: "Qual método devolve o primeiro item da lista que passa em um teste?",
+                alternativas: ["filter", "find", "some", "includes"],
+                respostaCerta: 1,
+                explicacao: "O find devolve só o primeiro item que passa no teste. O filter devolve uma lista com todos os que passam."
+            },
+            {
+                pergunta: "Qual método transforma um objeto em texto no formato JSON?",
+                alternativas: ["JSON.stringify", "JSON.parse", "JSON.convert", "JSON.text"],
+                respostaCerta: 0,
+                explicacao: "O JSON.stringify converte o objeto em texto, e o JSON.parse faz o caminho contrário."
+            }
         ]
     }
 };
