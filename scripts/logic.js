@@ -16,7 +16,6 @@ let selectedLevel = '';
 let currentQuestions = [];
 let currentQuestionIndex = 0;
 let score = 0;
-let timeRemaining = 20;
 let timeLeft = 0;
 let timerInterval;
 let mistakes = [];
@@ -89,7 +88,6 @@ function goToNextQuestion() {
             congratsMessage.hidden = false;
         } else {
             congratsMessage.hidden = true;
-            const mistakesList = document.querySelector('.mistakes-list');
 
             mistakes.forEach((mistake) => {
                 const item = document.createElement('div');
@@ -139,8 +137,6 @@ levelButtons.forEach((button) => {
 
         currentQuestions = questions[selectedTopic][selectedLevel].slice().sort(() => Math.random() - 0.5);
 
-        console.log(currentQuestions);
-
         showScreen('countdown');
 
         const countdownNumber = document.getElementById('countdown-number');
@@ -169,7 +165,6 @@ quizAlternatives.forEach((button) => {
             score = score + 1;
         } else {
             mistakes.push(currentQuestions[currentQuestionIndex]);
-            console.log(mistakes);
         }
        
        goToNextQuestion();

@@ -5,7 +5,7 @@ const questions = {
                 pergunta: "Qual tag cria um link em HTML?",
                 alternativas: ["li", "a", "hr", "span"],
                 respostaCerta: 1,
-                explicacao: " A tag a cria um link clicável em HTML."
+                explicacao: "A tag a cria um link clicável em HTML."
             },
             {
                 pergunta: "Qual tag cria o título principal de uma página?",
