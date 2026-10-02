@@ -126,7 +126,68 @@ const questions = {
             }
         ],
 
-        dificil: []
+        dificil: [
+            {
+                pergunta: "Qual valor de type um button assume por padrão dentro de um form?",
+                alternativas: ["button", "submit", "reset", "link"],
+                respostaCerta: 1,
+                explicacao: "Dentro de um form, o button sem type age como submit e envia o formulário. Por isso usamos type='button' neste quiz."
+            },
+            {
+                pergunta: "Qual atributo do script baixa o arquivo sem travar a página e o executa só depois que o HTML for lido?",
+                alternativas: ["async", "lazy", "wait", "defer"],
+                respostaCerta: 3,
+                explicacao: "O defer baixa o arquivo em paralelo e espera o HTML terminar. O async executa assim que o download acaba, sem esperar."
+            },
+            {
+                pergunta: "Qual atributo da tag img faz a imagem só ser carregada quando estiver perto de aparecer na tela?",
+                alternativas: ["loading", "lazy", "defer", "preload"],
+                respostaCerta: 0,
+                explicacao: "O atributo loading, com o valor lazy, adia o carregamento da imagem e deixa a página mais leve."
+            },
+            {
+                pergunta: "Qual tag permite oferecer imagens diferentes para tamanhos de tela diferentes?",
+                alternativas: ["gallery", "figure", "picture", "canvas"],
+                respostaCerta: 2,
+                explicacao: "A tag picture guarda várias tags source, uma para cada situação, e uma img de reserva."
+            },
+            {
+                pergunta: "Qual tag cria um bloco que abre e fecha ao clicar no título, sem precisar de JavaScript?",
+                alternativas: ["dialog", "details", "accordion", "collapse"],
+                respostaCerta: 1,
+                explicacao: "A tag details esconde o conteúdo até a pessoa clicar no summary, que funciona como título."
+            },
+            {
+                pergunta: "Qual atributo ARIA faz o leitor de tela avisar quando o conteúdo de um elemento muda?",
+                alternativas: ["aria-hidden", "aria-label", "aria-role", "aria-live"],
+                respostaCerta: 3,
+                explicacao: "O aria-live avisa as mudanças sem a pessoa precisar focar no elemento. Foi o que usamos no número da contagem regressiva."
+            },
+            {
+                pergunta: "Qual atributo faz o leitor de tela ignorar um elemento, como um ícone decorativo?",
+                alternativas: ["aria-hidden", "aria-ignore", "aria-skip", "aria-none"],
+                respostaCerta: 0,
+                explicacao: "O aria-hidden='true' tira o elemento da leitura. Usamos nos ícones dos botões, porque o texto já explica a ação."
+            },
+            {
+                pergunta: "Qual é a função do doctype no início do arquivo HTML?",
+                alternativas: ["Define o idioma da página", "Liga o CSS ao HTML", "Avisa ao navegador que o documento é HTML moderno", "Cria o título que aparece na aba"],
+                respostaCerta: 2,
+                explicacao: "Sem o doctype, o navegador pode entrar no modo de compatibilidade antigo e mostrar a página de um jeito inesperado."
+            },
+            {
+                pergunta: "Qual tag marca uma data ou um horário de forma que o computador consiga entender?",
+                alternativas: ["date", "time", "datetime", "clock"],
+                respostaCerta: 1,
+                explicacao: "A tag time, com o atributo datetime, guarda a data num formato que navegadores e buscadores entendem."
+            },
+            {
+                pergunta: "Qual atributo permite que um elemento comum, como uma div, receba foco pelo teclado?",
+                alternativas: ["tabindex", "focus", "keyboard", "accesskey"],
+                respostaCerta: 0,
+                explicacao: "O tabindex='0' coloca o elemento na ordem do Tab. Sempre que der, prefira elementos nativos, como o button."
+            }
+        ]
     },
     css: {
         facil: [
