@@ -57,7 +57,7 @@ header h1 {
 
 main {
     max-width: 50rem;
-    margin: 6rem auto 0;
+    margin: 4rem auto 0;
     padding: 1rem;
 }
 
@@ -214,6 +214,12 @@ main button {
 
 main section:not(.active) {
     display: none !important;
+}
+
+#result {
+    display: flex;
+    flex-direction: column;
+    gap: 3rem;
 }
 
 @media (min-width: 48rem) {
