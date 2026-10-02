@@ -62,7 +62,70 @@ const questions = {
                 explicacao: "A tag head guarda dados da página, como título, fontes e links para o CSS."
             }
         ],
-        medio: [],
+
+        medio: [
+            {
+                pergunta: "Qual tag guarda o conteúdo principal de uma página e deve aparecer só uma vez?",
+                alternativas: ["section", "article", "main", "aside"],
+                respostaCerta: 2,
+                explicacao: "A tag main marca o conteúdo principal da página e só pode existir uma vez."
+            },
+            {
+                pergunta: "Qual atributo faz um link abrir em uma nova aba?",
+                alternativas: ["target", "new", "open", "window"],
+                respostaCerta: 0,
+                explicacao: "O atributo target com o valor _blank abre o link em uma nova aba."
+            },
+            {
+                pergunta: "Qual atributo do input mostra uma dica dentro do campo enquanto ele está vazio?",
+                alternativas: ["hint", "value", "label", "placeholder"],
+                respostaCerta: 3,
+                explicacao: "O atributo placeholder mostra um texto de exemplo que some quando a pessoa começa a digitar."
+            },
+            {
+                pergunta: "Qual tag liga um texto a um campo de formulário, para que clicar no texto selecione o campo?",
+                alternativas: ["legend", "label", "caption", "title"],
+                respostaCerta: 1,
+                explicacao: "A tag label se conecta ao campo pelo atributo for e ajuda quem usa leitor de tela."
+            },
+            {
+                pergunta: "Qual tag cria uma linha em uma tabela?",
+                alternativas: ["td", "th", "tr", "row"],
+                respostaCerta: 2,
+                explicacao: "A tag tr cria uma linha, e dentro dela ficam as células td e th."
+            },
+            {
+                pergunta: "Qual valor do atributo type cria um campo que mostra os caracteres digitados como bolinhas?",
+                alternativas: ["secret", "hidden", "password", "mask"],
+                respostaCerta: 2,
+                explicacao: "O type password esconde o que a pessoa digita. Já o hidden nem mostra o campo na tela."
+            },
+            {
+                pergunta: "Qual tag marca o bloco com os links principais de navegação de um site?",
+                alternativas: ["header", "nav", "aside", "links"],
+                respostaCerta: 1,
+                explicacao: "A tag nav agrupa os links de navegação e ajuda os leitores de tela a encontrá-los."
+            },
+            {
+                pergunta: "Qual atributo da tag html define o idioma do conteúdo da página?",
+                alternativas: ["language", "locale", "charset", "lang"],
+                respostaCerta: 3,
+                explicacao: "O atributo lang, como em lang='pt-BR', ajuda navegadores e leitores de tela a tratar o idioma certo."
+            },
+            {
+                pergunta: "Qual valor do atributo name da tag meta ajusta a página à largura do celular?",
+                alternativas: ["viewport", "responsive", "mobile", "device"],
+                respostaCerta: 0,
+                explicacao: "A meta tag viewport faz a largura da página acompanhar a largura da tela do aparelho."
+            },
+            {
+                pergunta: "Qual atributo impede o envio de um formulário se o campo estiver vazio?",
+                alternativas: ["needed", "required", "mandatory", "important"],
+                respostaCerta: 1,
+                explicacao: "O atributo required obriga a pessoa a preencher o campo antes de enviar."
+            }
+        ],
+
         dificil: []
     },
     css: {
