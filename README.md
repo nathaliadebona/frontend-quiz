@@ -6,10 +6,6 @@ Built as a front-end learning project, with a focus on fundamentals: plain HTML,
 
 https://nathaliadebona.github.io/frontend-quiz/
 
-<img width="1822" height="1076" alt="nathaliadebona github io_frontend-quiz_1" src="https://github.com/user-attachments/assets/b2fe534d-adf2-4328-a9be-fe99041edbf9" />
-<img width="1826" height="1080" alt="nathaliadebona github io_frontend-quiz_2" src="https://github.com/user-attachments/assets/f0d4ea5b-1a19-4142-9d1e-5b6a7102f0c2" />
-<img width="1828" height="1078" alt="nathaliadebona github io_frontend-quiz_3" src="https://github.com/user-attachments/assets/b12e8eb7-87d8-4e4a-80c6-e5763b0be55b" />
-
 ## Features
 
 ### Quiz
@@ -60,7 +56,9 @@ Planned features, not yet implemented:
 
 ## Screenshots
 
-_Coming soon._
+<img width="1822" height="1076" alt="nathaliadebona github io_frontend-quiz_1" src="https://github.com/user-attachments/assets/b2fe534d-adf2-4328-a9be-fe99041edbf9" />
+<img width="1826" height="1080" alt="nathaliadebona github io_frontend-quiz_2" src="https://github.com/user-attachments/assets/f0d4ea5b-1a19-4142-9d1e-5b6a7102f0c2" />
+<img width="1828" height="1078" alt="nathaliadebona github io_frontend-quiz_3" src="https://github.com/user-attachments/assets/b12e8eb7-87d8-4e4a-80c6-e5763b0be55b" />
 
 ---
 
